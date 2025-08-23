@@ -16,7 +16,7 @@ R_HOME ?= $(ROOT_DIR)/../external/rsh/external/R
 R_LIB = $(R_HOME)/library/rcp/libs/rcp.so
 
 # 0 = relative addressing, 1 = relative addressing with GOT where needed, 2 = absolute addressing
-RELOC_MODEL ?= 2
+RELOC_MODEL ?= 1
 C_FLAGS_ADDITIONAL ?=
 #C_FLAGS_ADDITIONAL += -march=native
 
@@ -31,7 +31,7 @@ else
   $(error Unsupported RELOC_MODEL: $(RELOC_MODEL))
 endif
 
-SPECIALIZE_STEPFOR ?= 1
+SPECIALIZE_STEPFOR ?= 0
 SPECIALIZE_MATH1 ?= 1
 
 DEFINE_FLAGS ?= 
